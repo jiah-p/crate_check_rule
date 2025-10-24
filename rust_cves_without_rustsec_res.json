@@ -793,78 +793,6 @@
     "source": "NVD"
   },
   {
-    "cve_id": "CVE-2024-47614",
-    "title": "CVE-2024-47614 - async-graphql is a GraphQL server library implemented in Rust. async-graphql before 7.0.10 does not ...",
-    "description": "async-graphql is a GraphQL server library implemented in Rust. async-graphql before 7.0.10 does not limit the number of directives for a field. This can lead to Service Disruption, Resource Exhaustion, and User Experience Degradation. This vulnerability is fixed in 7.0.10.",
-    "severity": "HIGH",
-    "publish_date": "2024-10-03T15:15:14.720",
-    "references": [
-      "https://github.com/async-graphql/async-graphql/commit/7f1791488463d4e9c5adcd543962173e2f6cbd34",
-      "https://github.com/async-graphql/async-graphql/security/advisories/GHSA-5gc2-7c65-8fq8"
-    ],
-    "source": "NVD"
-  },
-  {
-    "cve_id": "CVE-2024-51502",
-    "title": "CVE-2024-51502 - loona is an experimental, HTTP/1.1 and HTTP/2 implementation in Rust on top of io-uring. `loona-hpac...",
-    "description": "loona is an experimental, HTTP/1.1 and HTTP/2 implementation in Rust on top of io-uring. `loona-hpack` suffers from the same vulnerability as the original `hpack` as documented in issue #11. All users who try to decode untrusted input using the Decoder are vulnerable to this exploit. This issue has been addressed in release version 0.4.3. All users are advised to upgrade. There are no known workarounds for this vulnerability.",
-    "severity": "未知",
-    "publish_date": "2024-11-04T23:15:05.070",
-    "references": [
-      "https://github.com/bearcove/loona/commit/9a4028ec6484f50a320281271a41a5040ddb1ba8",
-      "https://github.com/bearcove/loona/security/advisories/GHSA-7vm6-qwh5-9x44",
-      "https://github.com/mlalic/hpack-rs/issues/11"
-    ],
-    "source": "NVD"
-  },
-  {
-    "cve_id": "CVE-2024-32468",
-    "title": "CVE-2024-32468 - Deno is a runtime for JavaScript and TypeScript written in rust. Several cross-site scripting vulner...",
-    "description": "Deno is a runtime for JavaScript and TypeScript written in rust. Several cross-site scripting vulnerabilities existed in the `deno_doc` crate which lead to Self-XSS with deno doc --html. 1.) XSS in generated `search_index.js`, `deno_doc` outputs a JavaScript file for searching. However, the generated file used `innerHTML` on unsanitzed HTML input. 2.) XSS via property, method and enum names, `deno_doc` did not sanitize property names, method names and enum names. The first XSS most likely didn't have an impact since `deno doc --html` is expected to be used locally with own packages.",
-    "severity": "MEDIUM",
-    "publish_date": "2024-11-25T19:15:09.510",
-    "references": [
-      "https://github.com/denoland/deno/security/advisories/GHSA-qqwr-j9mm-fhw6",
-      "https://github.com/denoland/deno_doc/blob/dc556c848831d7ae48f3eff2ababc6e75eb6b73e/src/html/templates/pages/search.js#L120-L144"
-    ],
-    "source": "NVD"
-  },
-  {
-    "cve_id": "CVE-2024-53856",
-    "title": "CVE-2024-53856 - rPGP is a pure Rust implementation of OpenPGP. Prior to 0.14.1, rPGP allows an attacker to trigger r...",
-    "description": "rPGP is a pure Rust implementation of OpenPGP. Prior to 0.14.1, rPGP allows an attacker to trigger rpgp crashes by providing crafted data. This vulnerability is fixed in 0.14.1.",
-    "severity": "HIGH",
-    "publish_date": "2024-12-05T16:15:26.237",
-    "references": [
-      "https://github.com/rpgp/rpgp/security/advisories/GHSA-9rmp-2568-59rv"
-    ],
-    "source": "NVD"
-  },
-  {
-    "cve_id": "CVE-2024-53857",
-    "title": "CVE-2024-53857 - rPGP is a pure Rust implementation of OpenPGP. Prior to 0.14.1, rPGP allows attackers to trigger res...",
-    "description": "rPGP is a pure Rust implementation of OpenPGP. Prior to 0.14.1, rPGP allows attackers to trigger resource exhaustion vulnerabilities in rpgp by providing crafted messages. This affects general message parsing and decryption with symmetric keys.",
-    "severity": "HIGH",
-    "publish_date": "2024-12-05T16:15:26.393",
-    "references": [
-      "https://github.com/rpgp/rpgp/security/advisories/GHSA-4grw-m28r-q285"
-    ],
-    "source": "NVD"
-  },
-  {
-    "cve_id": "CVE-2024-56327",
-    "title": "CVE-2024-56327 - pyrage is a set of Python bindings for the rage file encryption library (age in Rust). `pyrage` uses...",
-    "description": "pyrage is a set of Python bindings for the rage file encryption library (age in Rust). `pyrage` uses the Rust `age` crate for its underlying operations, and `age` is vulnerable to GHSA-4fg7-vxc8-qx5w. All details of GHSA-4fg7-vxc8-qx5w are relevant to `pyrage` for the versions specified in this advisory. See GHSA-4fg7-vxc8-qx5w for full details. Versions of `pyrage` before 1.2.0 lack plugin support and are therefore **not affected**. An equivalent issue was fixed in [the reference Go implementation of age](https://github.com/FiloSottile/age), see advisory GHSA-32gq-x56h-299c. This issue has been addressed in version 1.2.3 and all users are advised to update. There are no known workarounds for this vulnerability.",
-    "severity": "CRITICAL",
-    "publish_date": "2024-12-19T23:15:07.147",
-    "references": [
-      "https://github.com/FiloSottile/age/security/advisories/GHSA-32gq-x56h-299c",
-      "https://github.com/advisories/GHSA-4fg7-vxc8-qx5w",
-      "https://github.com/woodruffw/pyrage/security/advisories/GHSA-47h8-jmp3-9f28"
-    ],
-    "source": "NVD"
-  },
-  {
     "cve_id": "CVE-2025-24898",
     "title": "CVE-2025-24898 - rust-openssl is a set of OpenSSL bindings for the Rust programming language. In affected versions `s...",
     "description": "rust-openssl is a set of OpenSSL bindings for the Rust programming language. In affected versions `ssl::select_next_proto` can return a slice pointing into the `server` argument's buffer but with a lifetime bound to the `client` argument. In situations where the `sever` buffer's lifetime is shorter than the `client` buffer's, this can cause a use after free. This could cause the server to crash or to return arbitrary memory contents to the client. The crate`openssl` version 0.10.70 fixes the signature of `ssl::select_next_proto` to properly constrain the output buffer's lifetime to that of both input buffers. Users are advised to upgrade. In standard usage of `ssl::select_next_proto` in the callback passed to `SslContextBuilder::set_alpn_select_callback`, code is only affected if the `server` buffer is constructed *within* the callback.",
@@ -933,18 +861,6 @@
     "publish_date": "2025-02-25T15:15:24.380",
     "references": [
       "https://patchstack.com/database/wordpress/plugin/front-end-only-users/vulnerability/wordpress-front-end-users-plugin-3-2-30-cross-site-scripting-xss-vulnerability?_s_id=cve"
-    ],
-    "source": "NVD"
-  },
-  {
-    "cve_id": "CVE-2025-27498",
-    "title": "CVE-2025-27498 - aes-gcm is a pure Rust implementation of the AES-GCM. In decrypt_in_place_detached, the decrypted ci...",
-    "description": "aes-gcm is a pure Rust implementation of the AES-GCM. In decrypt_in_place_detached, the decrypted ciphertext (which is the correct ciphertext) is exposed even if the tag is incorrect. This is because in decrypt_inplace in asconcore.rs, tag verification causes an error to be returned with the plaintext contents still in buffer. The vulnerability is fixed in 0.4.3.",
-    "severity": "未知",
-    "publish_date": "2025-03-03T17:15:16.443",
-    "references": [
-      "https://github.com/RustCrypto/AEADs/commit/d1d749ba57e38e65b0e037cd744d0b17f7254037",
-      "https://github.com/RustCrypto/AEADs/security/advisories/GHSA-r38m-44fw-h886"
     ],
     "source": "NVD"
   }
