@@ -1,0 +1,951 @@
+[
+  {
+    "cve_id": "CVE-2019-15541",
+    "title": "CVE-2019-15541 - rustls-mio/examples/tlsserver.rs in the rustls crate before 0.16.0 for Rust allows attackers to caus...",
+    "description": "rustls-mio/examples/tlsserver.rs in the rustls crate before 0.16.0 for Rust allows attackers to cause a denial of service (loop of conn_event and ready) by arranging for a client to never be writable.",
+    "severity": "HIGH",
+    "publish_date": "2019-08-26T12:15:11.780",
+    "references": [
+      "https://github.com/ctz/rustls/commit/a93ee1abd2ab19ebe4bf9d684d56637ee54a6074",
+      "https://github.com/ctz/rustls/compare/cd66549...17ee52c",
+      "https://github.com/ctz/rustls/issues/285",
+      "https://github.com/ctz/rustls/commit/a93ee1abd2ab19ebe4bf9d684d56637ee54a6074",
+      "https://github.com/ctz/rustls/compare/cd66549...17ee52c",
+      "https://github.com/ctz/rustls/issues/285"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2021-32619",
+    "title": "CVE-2021-32619 - Deno is a runtime for JavaScript and TypeScript that uses V8 and is built in Rust. In Deno versions ...",
+    "description": "Deno is a runtime for JavaScript and TypeScript that uses V8 and is built in Rust. In Deno versions 1.5.0 to 1.10.1, modules that are dynamically imported through `import()` or `new Worker` might have been able to bypass network and file system permission checks when statically importing other modules. The vulnerability has been patched in Deno release 1.10.2.",
+    "severity": "CRITICAL",
+    "publish_date": "2021-05-28T21:15:08.893",
+    "references": [
+      "https://github.com/denoland/deno/security/advisories/GHSA-xpwj-7v8q-mcgj",
+      "https://github.com/denoland/deno/security/advisories/GHSA-xpwj-7v8q-mcgj"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2021-41153",
+    "title": "CVE-2021-41153 - The evm crate is a pure Rust implementation of Ethereum Virtual Machine. In `evm` crate `< 0.31.0`, ...",
+    "description": "The evm crate is a pure Rust implementation of Ethereum Virtual Machine. In `evm` crate `< 0.31.0`, `JUMPI` opcode's condition is checked after the destination validity check. However, according to Geth and OpenEthereum, the condition check should happen before the destination validity check. This is a **high** severity security advisory if you use `evm` crate for Ethereum mainnet. In this case, you should update your library dependency immediately to on or after `0.31.0`. This is a **low** severity security advisory if you use `evm` crate in Frontier or in a standalone blockchain, because there's no security exploit possible with this advisory. It is **not** recommended to update to on or after `0.31.0` until all the normal chain upgrade preparations have been done. If you use Frontier or other `pallet-evm` based Substrate blockchain, please ensure to update your `spec_version` before updating this. For other blockchains, please make sure to follow a hard-fork process before you update this.",
+    "severity": "HIGH",
+    "publish_date": "2021-10-18T21:15:08.353",
+    "references": [
+      "https://github.com/rust-blockchain/evm/pull/67",
+      "https://github.com/rust-blockchain/evm/security/advisories/GHSA-pvh2-pj76-4m96",
+      "https://github.com/rust-blockchain/evm/pull/67",
+      "https://github.com/rust-blockchain/evm/security/advisories/GHSA-pvh2-pj76-4m96"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2021-41149",
+    "title": "CVE-2021-41149 - Tough provides a set of Rust libraries and tools for using and generating the update framework (TUF)...",
+    "description": "Tough provides a set of Rust libraries and tools for using and generating the update framework (TUF) repositories. The tough library, prior to 0.12.0, does not properly sanitize target names when caching a repository, or when saving specific targets to an output directory. When targets are cached or saved, files could be overwritten with arbitrary content anywhere on the system. A fix is available in version 0.12.0. No workarounds to this issue are known.",
+    "severity": "HIGH",
+    "publish_date": "2021-10-19T18:15:08.093",
+    "references": [
+      "https://github.com/awslabs/tough/commit/1809b9bd1106d78a51fbea3071aa97a3530bac9a",
+      "https://github.com/awslabs/tough/security/advisories/GHSA-x3r5-q6mj-m485",
+      "https://github.com/awslabs/tough/commit/1809b9bd1106d78a51fbea3071aa97a3530bac9a",
+      "https://github.com/awslabs/tough/security/advisories/GHSA-x3r5-q6mj-m485"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2021-41150",
+    "title": "CVE-2021-41150 - Tough provides a set of Rust libraries and tools for using and generating the update framework (TUF)...",
+    "description": "Tough provides a set of Rust libraries and tools for using and generating the update framework (TUF) repositories. The tough library, prior to 0.12.0, does not properly sanitize delegated role names when caching a repository, or when loading a repository from the filesystem. When the repository is cached or loaded, files ending with the .json extension could be overwritten with role metadata anywhere on the system. A fix is available in version 0.12.0. No workarounds to this issue are known.",
+    "severity": "HIGH",
+    "publish_date": "2021-10-19T20:15:08.263",
+    "references": [
+      "https://github.com/awslabs/tough/commit/1809b9bd1106d78a51fbea3071aa97a3530bac9a",
+      "https://github.com/awslabs/tough/security/advisories/GHSA-r56q-vv3c-6g9c",
+      "https://github.com/theupdateframework/python-tuf/security/advisories/GHSA-wjw6-2cqr-j4qr",
+      "https://github.com/awslabs/tough/commit/1809b9bd1106d78a51fbea3071aa97a3530bac9a",
+      "https://github.com/awslabs/tough/security/advisories/GHSA-r56q-vv3c-6g9c",
+      "https://github.com/theupdateframework/python-tuf/security/advisories/GHSA-wjw6-2cqr-j4qr"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2022-31053",
+    "title": "CVE-2022-31053 - Biscuit is an authentication and authorization token for microservices architectures. The Biscuit sp...",
+    "description": "Biscuit is an authentication and authorization token for microservices architectures. The Biscuit specification version 1 contains a vulnerable algorithm that allows malicious actors to forge valid Γ-signatures. Such an attack would allow an attacker to create a token with any access level. The version 2 of the specification mandates a different algorithm than gamma signatures and as such is not affected by this vulnerability. The Biscuit implementations in Rust, Haskell, Go, Java and Javascript all have published versions following the v2 specification. There are no known workarounds for this issue.",
+    "severity": "CRITICAL",
+    "publish_date": "2022-06-13T20:15:07.820",
+    "references": [
+      "https://eprint.iacr.org/2020/1484",
+      "https://github.com/biscuit-auth/biscuit/security/advisories/GHSA-75rw-34q6-72cr",
+      "https://eprint.iacr.org/2020/1484",
+      "https://github.com/biscuit-auth/biscuit/security/advisories/GHSA-75rw-34q6-72cr"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2022-36113",
+    "title": "CVE-2022-36113 - Cargo is a package manager for the rust programming language. After a package is downloaded, Cargo e...",
+    "description": "Cargo is a package manager for the rust programming language. After a package is downloaded, Cargo extracts its source code in the ~/.cargo folder on disk, making it available to the Rust projects it builds. To record when an extraction is successful, Cargo writes \"ok\" to the .cargo-ok file at the root of the extracted source code once it extracted all the files. It was discovered that Cargo allowed packages to contain a .cargo-ok symbolic link, which Cargo would extract. Then, when Cargo attempted to write \"ok\" into .cargo-ok, it would actually replace the first two bytes of the file the symlink pointed to with ok. This would allow an attacker to corrupt one file on the machine using Cargo to extract the package. Note that by design Cargo allows code execution at build time, due to build scripts and procedural macros. The vulnerabilities in this advisory allow performing a subset of the possible damage in a harder to track down way. Your dependencies must still be trusted if you want to be protected from attacks, as it's possible to perform the same attacks with build scripts and procedural macros. The vulnerability is present in all versions of Cargo. Rust 1.64, to be released on September 22nd, will include a fix for it. Since the vulnerability is just a more limited way to accomplish what a malicious build scripts or procedural macros can do, we decided not to publish Rust point releases backporting the security fix. Patch files are available for Rust 1.63.0 are available in the wg-security-response repository for people building their own toolchain.\nMitigations We recommend users of alternate registries to exercise care in which package they download, by only including trusted dependencies in their projects. Please note that even with these vulnerabilities fixed, by design Cargo allows arbitrary code execution at build time thanks to build scripts and procedural macros: a malicious dependency will be able to cause damage regardless of these vulnerabilities. crates.io implemented server-side checks to reject these kinds of packages years ago, and there are no packages on crates.io exploiting these vulnerabilities. crates.io users still need to exercise care in choosing their dependencies though, as remote code execution is allowed by design there as well.",
+    "severity": "MEDIUM",
+    "publish_date": "2022-09-14T18:15:10.763",
+    "references": [
+      "https://github.com/rust-lang/cargo/commit/97b80919e404b0768ea31ae329c3b4da54bed05a",
+      "https://github.com/rust-lang/cargo/security/advisories/GHSA-rfj2-q3h3-hm5j",
+      "https://github.com/rust-lang/cargo/commit/97b80919e404b0768ea31ae329c3b4da54bed05a",
+      "https://github.com/rust-lang/cargo/security/advisories/GHSA-rfj2-q3h3-hm5j"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2022-36114",
+    "title": "CVE-2022-36114 - Cargo is a package manager for the rust programming language. It was discovered that Cargo did not l...",
+    "description": "Cargo is a package manager for the rust programming language. It was discovered that Cargo did not limit the amount of data extracted from compressed archives. An attacker could upload to an alternate registry a specially crafted package that extracts way more data than its size (also known as a \"zip bomb\"), exhausting the disk space on the machine using Cargo to download the package. Note that by design Cargo allows code execution at build time, due to build scripts and procedural macros. The vulnerabilities in this advisory allow performing a subset of the possible damage in a harder to track down way. Your dependencies must still be trusted if you want to be protected from attacks, as it's possible to perform the same attacks with build scripts and procedural macros. The vulnerability is present in all versions of Cargo. Rust 1.64, to be released on September 22nd, will include a fix for it. Since the vulnerability is just a more limited way to accomplish what a malicious build scripts or procedural macros can do, we decided not to publish Rust point releases backporting the security fix. Patch files are available for Rust 1.63.0 are available in the wg-security-response repository for people building their own toolchain. We recommend users of alternate registries to excercise care in which package they download, by only including trusted dependencies in their projects. Please note that even with these vulnerabilities fixed, by design Cargo allows arbitrary code execution at build time thanks to build scripts and procedural macros: a malicious dependency will be able to cause damage regardless of these vulnerabilities. crates.io implemented server-side checks to reject these kinds of packages years ago, and there are no packages on crates.io exploiting these vulnerabilities. crates.io users still need to excercise care in choosing their dependencies though, as the same concerns about build scripts and procedural macros apply here.",
+    "severity": "MEDIUM",
+    "publish_date": "2022-09-14T18:15:10.830",
+    "references": [
+      "https://github.com/rust-lang/cargo/commit/d1f9553c825f6d7481453be8d58d0e7f117988a7",
+      "https://github.com/rust-lang/cargo/security/advisories/GHSA-2hvr-h6gw-qrxp",
+      "https://github.com/rust-lang/cargo/commit/d1f9553c825f6d7481453be8d58d0e7f117988a7",
+      "https://github.com/rust-lang/cargo/security/advisories/GHSA-2hvr-h6gw-qrxp"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2022-46176",
+    "title": "CVE-2022-46176 - Cargo is a Rust package manager. The Rust Security Response WG was notified that Cargo did not perfo...",
+    "description": "Cargo is a Rust package manager. The Rust Security Response WG was notified that Cargo did not perform SSH host key verification when cloning indexes and dependencies via SSH. An attacker could exploit this to perform man-in-the-middle (MITM) attacks. This vulnerability has been assigned CVE-2022-46176. All Rust versions containing Cargo before 1.66.1 are vulnerable. Note that even if you don't explicitly use SSH for alternate registry indexes or crate dependencies, you might be affected by this vulnerability if you have configured git to replace HTTPS connections to GitHub with SSH (through git's [`url.<base>.insteadOf`][1] setting), as that'd cause you to clone the crates.io index through SSH. Rust 1.66.1 will ensure Cargo checks the SSH host key and abort the connection if the server's public key is not already trusted. We recommend everyone to upgrade as soon as possible. ",
+    "severity": "MEDIUM",
+    "publish_date": "2023-01-11T21:15:10.087",
+    "references": [
+      "http://www.openwall.com/lists/oss-security/2023/11/05/6",
+      "http://www.openwall.com/lists/oss-security/2023/11/06/5",
+      "https://github.com/rust-lang/cargo/security/advisories/GHSA-r5w3-xm58-jv6j",
+      "https://github.com/rust-lang/wg-security-response/tree/main/patches/CVE-2022-46176",
+      "http://www.openwall.com/lists/oss-security/2023/11/05/6",
+      "http://www.openwall.com/lists/oss-security/2023/11/06/5",
+      "https://github.com/rust-lang/cargo/security/advisories/GHSA-r5w3-xm58-jv6j",
+      "https://github.com/rust-lang/wg-security-response/tree/main/patches/CVE-2022-46176"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2022-45299",
+    "title": "CVE-2022-45299 - An issue in the IpFile argument of rust-lang webbrowser-rs v0.8.2 allows attackers to access arbitra...",
+    "description": "An issue in the IpFile argument of rust-lang webbrowser-rs v0.8.2 allows attackers to access arbitrary files via supplying a crafted URL.",
+    "severity": "CRITICAL",
+    "publish_date": "2023-01-13T21:15:15.600",
+    "references": [
+      "https://github.com/offalltn/CVE-2022-45299",
+      "https://github.com/offalltn/CVE-2022-45299"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2023-22499",
+    "title": "CVE-2023-22499 - Deno is a runtime for JavaScript and TypeScript that uses V8 and is built in Rust. Multi-threaded pr...",
+    "description": "Deno is a runtime for JavaScript and TypeScript that uses V8 and is built in Rust. Multi-threaded programs were able to spoof interactive permission prompt by rewriting the prompt to suggest that program is waiting on user confirmation to unrelated action. A malicious program could clear the terminal screen after permission prompt was shown and write a generic message. This situation impacts users who use Web Worker API and relied on interactive permission prompt. The reproduction is very timing sensitive and can’t be reliably reproduced on every try. This problem can not be exploited on systems that do not attach an interactive prompt (for example headless servers). The problem has been fixed in Deno v1.29.3; it is recommended all users update to this version. Users are advised to upgrade. Users unable to upgrade may run with --no-prompt flag to disable interactive permission prompts.",
+    "severity": "HIGH",
+    "publish_date": "2023-01-17T21:15:15.883",
+    "references": [
+      "https://github.com/denoland/deno/pull/17392",
+      "https://github.com/denoland/deno/security/advisories/GHSA-mc52-jpm2-cqh6",
+      "https://github.com/denoland/deno/pull/17392",
+      "https://github.com/denoland/deno/security/advisories/GHSA-mc52-jpm2-cqh6"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2023-28113",
+    "title": "CVE-2023-28113 - russh is a Rust SSH client and server library. Starting in version 0.34.0 and prior to versions 0.36...",
+    "description": "russh is a Rust SSH client and server library. Starting in version 0.34.0 and prior to versions 0.36.2 and 0.37.1, Diffie-Hellman key validation is insufficient, which can lead to insecure shared secrets and therefore breaks confidentiality. Connections between a russh client and server or those of a russh peer with some other misbehaving peer are most likely to be problematic. These may vulnerable to eavesdropping. Most other implementations reject such keys, so this is mainly an interoperability issue in such a case. This issue is fixed in versions 0.36.2 and 0.37.1",
+    "severity": "MEDIUM",
+    "publish_date": "2023-03-16T21:15:13.360",
+    "references": [
+      "https://github.com/warp-tech/russh/blob/master/russh/src/kex/dh/groups.rs#L72-L76",
+      "https://github.com/warp-tech/russh/blob/master/russh/src/kex/dh/groups.rs#L78-L81",
+      "https://github.com/warp-tech/russh/commit/d831a3716d3719dc76f091fcea9d94bd4ef97c6e",
+      "https://github.com/warp-tech/russh/releases/tag/v0.36.2",
+      "https://github.com/warp-tech/russh/releases/tag/v0.37.1",
+      "https://github.com/warp-tech/russh/security/advisories/GHSA-cqvm-j2r2-hwpg",
+      "https://github.com/warp-tech/russh/blob/master/russh/src/kex/dh/groups.rs#L72-L76",
+      "https://github.com/warp-tech/russh/blob/master/russh/src/kex/dh/groups.rs#L78-L81",
+      "https://github.com/warp-tech/russh/commit/d831a3716d3719dc76f091fcea9d94bd4ef97c6e",
+      "https://github.com/warp-tech/russh/releases/tag/v0.36.2",
+      "https://github.com/warp-tech/russh/releases/tag/v0.37.1",
+      "https://github.com/warp-tech/russh/security/advisories/GHSA-cqvm-j2r2-hwpg"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2023-28445",
+    "title": "CVE-2023-28445 - Deno is a runtime for JavaScript and TypeScript that uses V8 and is built in Rust. Resizable ArrayBu...",
+    "description": "Deno is a runtime for JavaScript and TypeScript that uses V8 and is built in Rust. Resizable ArrayBuffers passed to asynchronous functions that are shrunk during the asynchronous operation could result in an out-of-bound read/write. It is unlikely that this has been exploited in the wild, as the only version affected is Deno 1.32.0. Deno Deploy users are not affected. The problem has been resolved by disabling resizable ArrayBuffers temporarily in Deno 1.32.1. Deno 1.32.2 will re-enable resizable ArrayBuffers with a proper fix. As a workaround, run with `--v8-flags=--no-harmony-rab-gsab` to disable resizable ArrayBuffers.",
+    "severity": "CRITICAL",
+    "publish_date": "2023-03-24T00:15:15.653",
+    "references": [
+      "https://github.com/denoland/deno/pull/18395",
+      "https://github.com/denoland/deno/releases/tag/v1.32.1",
+      "https://github.com/denoland/deno/security/advisories/GHSA-c25x-cm9x-qqgx",
+      "https://github.com/denoland/deno/pull/18395",
+      "https://github.com/denoland/deno/releases/tag/v1.32.1",
+      "https://github.com/denoland/deno/security/advisories/GHSA-c25x-cm9x-qqgx"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2023-28446",
+    "title": "CVE-2023-28446 - Deno is a simple, modern and secure runtime for JavaScript and TypeScript that uses V8 and is built ...",
+    "description": "Deno is a simple, modern and secure runtime for JavaScript and TypeScript that uses V8 and is built in Rust. Arbitrary program names without any ANSI filtering allows any malicious program to clear the first 2 lines of a `op_spawn_child` or `op_kill` prompt and replace it with any desired text. This works with any command on the respective platform, giving the program the full ability to choose what program they wanted to run. This problem can not be exploited on systems that do not attach an interactive prompt (for example headless servers). This issue has been patched in version 1.31.2.\n",
+    "severity": "HIGH",
+    "publish_date": "2023-03-24T20:15:15.560",
+    "references": [
+      "https://github.com/denoland/deno/blob/7d13d65468c37022f003bb680dfbddd07ea72173/runtime/js/40_process.js#L175",
+      "https://github.com/denoland/deno/releases/tag/v1.31.2",
+      "https://github.com/denoland/deno/security/advisories/GHSA-vq67-rp93-65qf",
+      "https://github.com/denoland/deno/blob/7d13d65468c37022f003bb680dfbddd07ea72173/runtime/js/40_process.js#L175",
+      "https://github.com/denoland/deno/releases/tag/v1.31.2",
+      "https://github.com/denoland/deno/security/advisories/GHSA-vq67-rp93-65qf"
+    ],
+    "source": "NVD"
+  },
+
+  {
+    "cve_id": "CVE-2023-28626",
+    "title": "CVE-2023-28626 - comrak is a CommonMark + GFM compatible Markdown parser and renderer written in rust. A range of qua...",
+    "description": "comrak is a CommonMark + GFM compatible Markdown parser and renderer written in rust. A range of quadratic parsing issues are present in Comrak. These can be used to craft denial-of-service attacks on services that use Comrak to parse Markdown. This issue has been addressed in version 0.17.0. Users are advised to upgrade. There are no known workarounds for this vulnerability. This issue is also tracked as `GHSL-2023-047`",
+    "severity": "MEDIUM",
+    "publish_date": "2023-03-28T21:15:11.190",
+    "references": [
+      "https://github.com/kivikakk/comrak/commit/ce795b7f471b01589f842dc09af38b025701178d",
+      "https://github.com/kivikakk/comrak/security/advisories/GHSA-8hqf-xjwp-p67v",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/OUYME2VA555X6567H7ORIJQFN4BVGT6N/",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PTWZWCT7KCX2KTXTLPUYZ3EHOONG4X46/",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/VQ3UBC7LE4VPCMZBTADIBL353CH7CPVV/",
+      "https://github.com/kivikakk/comrak/commit/ce795b7f471b01589f842dc09af38b025701178d",
+      "https://github.com/kivikakk/comrak/security/advisories/GHSA-8hqf-xjwp-p67v",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/OUYME2VA555X6567H7ORIJQFN4BVGT6N/",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PTWZWCT7KCX2KTXTLPUYZ3EHOONG4X46/",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/VQ3UBC7LE4VPCMZBTADIBL353CH7CPVV/"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2023-28631",
+    "title": "CVE-2023-28631 - comrak is a CommonMark + GFM compatible Markdown parser and renderer written in rust. A Comrak AST c...",
+    "description": "comrak is a CommonMark + GFM compatible Markdown parser and renderer written in rust. A Comrak AST can be constructed manually by a program instead of parsing a Markdown document with `parse_document`. This AST can then be converted to HTML via `html::format_document_with_plugins`. However, the HTML formatting code assumes that the AST is well-formed. For example, many AST notes contain `[u8]` fields which the formatting code assumes is valid UTF-8 data. Several bugs can be triggered if this is not the case. Version 0.17.0 contains adjustments to the AST, storing strings instead of unvalidated byte arrays. Users are advised to upgrade. Users unable to upgrade may manually validate UTF-8 correctness of all data when assigning to `&[u8]` and `Vec<u8>` fields in the AST. This issue is also tracked as `GHSL-2023-049`.",
+    "severity": "MEDIUM",
+    "publish_date": "2023-03-28T21:15:11.250",
+    "references": [
+      "https://github.com/kivikakk/comrak/commit/9ff5f8df0ac951f5742d22a72c39b89a15f56639",
+      "https://github.com/kivikakk/comrak/security/advisories/GHSA-5r3x-p7xx-x6q5",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/OUYME2VA555X6567H7ORIJQFN4BVGT6N/",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PTWZWCT7KCX2KTXTLPUYZ3EHOONG4X46/",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/VQ3UBC7LE4VPCMZBTADIBL353CH7CPVV/",
+      "https://github.com/kivikakk/comrak/commit/9ff5f8df0ac951f5742d22a72c39b89a15f56639",
+      "https://github.com/kivikakk/comrak/security/advisories/GHSA-5r3x-p7xx-x6q5",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/OUYME2VA555X6567H7ORIJQFN4BVGT6N/",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PTWZWCT7KCX2KTXTLPUYZ3EHOONG4X46/",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/VQ3UBC7LE4VPCMZBTADIBL353CH7CPVV/"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2023-30610",
+    "title": "CVE-2023-30610 - aws-sigv4 is a rust library for low level request signing in the aws cloud platform. The `aws_sigv4:...",
+    "description": "aws-sigv4 is a rust library for low level request signing in the aws cloud platform. The `aws_sigv4::SigningParams` struct had a derived `Debug` implementation. When debug-formatted, it would include a user's AWS access key, AWS secret key, and security token in plaintext. When TRACE-level logging is enabled for an SDK, `SigningParams` is printed, thereby revealing those credentials to anyone with access to logs. All users of the AWS SDK for Rust who enabled TRACE-level logging, either globally (e.g. `RUST_LOG=trace`), or for the `aws-sigv4` crate specifically are affected. This issue has been addressed in a set of new releases. Users are advised to upgrade. Users unable to upgrade should disable TRACE-level logging for AWS Rust SDK crates.\n",
+    "severity": "MEDIUM",
+    "publish_date": "2023-04-19T18:15:07.417",
+    "references": [
+      "https://github.com/awslabs/aws-sdk-rust/security/advisories/GHSA-mjv9-vp6w-3rc9",
+      "https://github.com/awslabs/aws-sdk-rust/security/advisories/GHSA-mjv9-vp6w-3rc9"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2023-33192",
+    "title": "CVE-2023-33192 - ntpd-rs is an NTP implementation written in Rust. ntpd-rs does not validate the length of NTS cookie...",
+    "description": "ntpd-rs is an NTP implementation written in Rust. ntpd-rs does not validate the length of NTS cookies in received NTP packets to the server. An attacker can crash the server by sending a specially crafted NTP packet containing a cookie shorter than what the server expects. The server also crashes when it is not configured to handle NTS packets. The issue was caused by improper slice indexing. The indexing operations were replaced by safer alternatives that do not crash the ntpd-rs server process but instead properly handle the error condition. A patch was released in version 0.3.3.",
+    "severity": "HIGH",
+    "publish_date": "2023-05-27T04:15:25.673",
+    "references": [
+      "https://github.com/pendulum-project/ntpd-rs/pull/752",
+      "https://github.com/pendulum-project/ntpd-rs/security/advisories/GHSA-qwhm-h7v3-mrjx",
+      "https://github.com/pendulum-project/ntpd-rs/pull/752",
+      "https://github.com/pendulum-project/ntpd-rs/security/advisories/GHSA-qwhm-h7v3-mrjx"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2023-34411",
+    "title": "CVE-2023-34411 - The xml-rs crate before 0.8.14 for Rust and Crab allows a denial of service (panic) via an invalid <...",
+    "description": "The xml-rs crate before 0.8.14 for Rust and Crab allows a denial of service (panic) via an invalid <! token (such as <!DOCTYPEs/%<!A nesting) in an XML document. The earliest affected version is 0.8.9.",
+    "severity": "HIGH",
+    "publish_date": "2023-06-05T04:15:11.153",
+    "references": [
+      "https://github.com/00xc/xml-rs/commit/0f084d45aa53e4a27476961785f59f2bd7d59a9f",
+      "https://github.com/netvl/xml-rs/commit/c09549a187e62d39d40467f129e64abf32efc35c",
+      "https://github.com/netvl/xml-rs/compare/0.8.13...0.8.14",
+      "https://github.com/netvl/xml-rs/pull/226",
+      "https://github.com/00xc/xml-rs/commit/0f084d45aa53e4a27476961785f59f2bd7d59a9f",
+      "https://github.com/netvl/xml-rs/commit/c09549a187e62d39d40467f129e64abf32efc35c",
+      "https://github.com/netvl/xml-rs/compare/0.8.13...0.8.14",
+      "https://github.com/netvl/xml-rs/pull/226"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2023-33290",
+    "title": "CVE-2023-33290 - The git-url-parse crate through 0.4.4 for Rust allows Regular Expression Denial of Service (ReDos) v...",
+    "description": "The git-url-parse crate through 0.4.4 for Rust allows Regular Expression Denial of Service (ReDos) via a crafted URL to normalize_url in lib.rs, a similar issue to CVE-2023-32758 (Python).",
+    "severity": "HIGH",
+    "publish_date": "2023-06-12T13:15:10.243",
+    "references": [
+      "https://github.com/tjtelan/git-url-parse-rs/issues/51",
+      "https://lib.rs/crates/git-url-parse",
+      "https://github.com/tjtelan/git-url-parse-rs/issues/51",
+      "https://lib.rs/crates/git-url-parse"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2023-34449",
+    "title": "CVE-2023-34449 - ink! is an embedded domain specific language to write smart contracts in Rust for blockchains built ...",
+    "description": "ink! is an embedded domain specific language to write smart contracts in Rust for blockchains built on the Substrate framework. Starting in version 4.0.0 and prior to version 4.2.1, the return value when using delegate call mechanics, either through `CallBuilder::delegate` or `ink_env::invoke_contract_delegate`, is decoded incorrectly. This bug was related to the mechanics around decoding a call's return buffer, which was changed as part of pull request 1450. Since this feature was only released in ink! 4.0.0, no previous versions are affected. Users who have an ink! 4.x series contract should upgrade to 4.2.1 to receive a patch.",
+    "severity": "MEDIUM",
+    "publish_date": "2023-06-14T21:15:09.790",
+    "references": [
+      "https://docs.rs/ink_env/4.2.0/ink_env/call/struct.CallBuilder.html#method.delegate",
+      "https://docs.rs/ink_env/4.2.0/ink_env/fn.invoke_contract_delegate.html",
+      "https://github.com/paritytech/ink/commit/f1407ee9f87e5f64d467a22d26ee88f61db7f3db",
+      "https://github.com/paritytech/ink/pull/1450",
+      "https://github.com/paritytech/ink/security/advisories/GHSA-853p-5678-hv8f",
+      "https://docs.rs/ink_env/4.2.0/ink_env/call/struct.CallBuilder.html#method.delegate",
+      "https://docs.rs/ink_env/4.2.0/ink_env/fn.invoke_contract_delegate.html",
+      "https://github.com/paritytech/ink/commit/f1407ee9f87e5f64d467a22d26ee88f61db7f3db",
+      "https://github.com/paritytech/ink/pull/1450",
+      "https://github.com/paritytech/ink/security/advisories/GHSA-853p-5678-hv8f"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2023-33289",
+    "title": "CVE-2023-33289 - The urlnorm crate through 0.1.4 for Rust allows Regular Expression Denial of Service (ReDos) via a c...",
+    "description": "The urlnorm crate through 0.1.4 for Rust allows Regular Expression Denial of Service (ReDos) via a crafted URL to lib.rs. NOTE: the Supplier disputes this, taking the position that \"Slow printing of URLs is not a CVE.\"",
+    "severity": "HIGH",
+    "publish_date": "2023-06-21T20:15:10.157",
+    "references": [
+      "https://gist.github.com/6en6ar/b118888dc739e8979038f24c8ac33611",
+      "https://github.com/progscrape/urlnorm",
+      "https://lib.rs/crates/urlnorm",
+      "https://news.ycombinator.com/item?id=40435263",
+      "https://gist.github.com/6en6ar/b118888dc739e8979038f24c8ac33611",
+      "https://github.com/progscrape/urlnorm",
+      "https://lib.rs/crates/urlnorm"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2023-3766",
+    "title": "CVE-2023-3766 - A vulnerability was discovered in the odoh-rs rust crate that stems from faulty logic during the par...",
+    "description": "A vulnerability was discovered in the odoh-rs rust crate that stems from faulty logic during the parsing of encrypted queries. This issue specifically occurs when processing encrypted query data received from remote clients and enables an attacker with knowledge of this vulnerability to craft and send specially designed encrypted queries to targeted ODOH servers running with odoh-rs. Upon successful exploitation, the server will crash abruptly, disrupting its normal operation and rendering the service temporarily unavailable.\n\n",
+    "severity": "MEDIUM",
+    "publish_date": "2023-08-03T15:15:32.097",
+    "references": [
+      "https://github.com/cloudflare/odoh-rs/pull/28",
+      "https://github.com/cloudflare/odoh-rs/security/advisories/GHSA-gpcv-p28p-fv2p",
+      "https://github.com/cloudflare/odoh-rs/pull/28",
+      "https://github.com/cloudflare/odoh-rs/security/advisories/GHSA-gpcv-p28p-fv2p"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2023-42811",
+    "title": "CVE-2023-42811 - aes-gcm is a pure Rust implementation of the AES-GCM. Starting in version 0.10.0 and prior to versio...",
+    "description": "aes-gcm is a pure Rust implementation of the AES-GCM. Starting in version 0.10.0 and prior to version 0.10.3, in the AES GCM implementation of decrypt_in_place_detached, the decrypted ciphertext (i.e. the correct plaintext) is exposed even if tag verification fails. If a program using the `aes-gcm` crate's `decrypt_in_place*` APIs accesses the buffer after decryption failure, it will contain a decryption of an unauthenticated input. Depending on the specific nature of the program this may enable Chosen Ciphertext Attacks (CCAs) which can cause a catastrophic breakage of the cipher including full plaintext recovery. Version 0.10.3 contains a fix for this issue.",
+    "severity": "MEDIUM",
+    "publish_date": "2023-09-22T16:15:10.583",
+    "references": [
+      "https://docs.rs/aes-gcm/latest/src/aes_gcm/lib.rs.html#309",
+      "https://github.com/RustCrypto/AEADs/security/advisories/GHSA-423w-p2w9-r7vq",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ROBB6TBDAGEQ2WIINR34F3DPSN3FND6K/",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/RYQCICN6BVC6I75O3F6W4VK4J3MOYDJU/",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/U67ZSMNX5V3WTBYPUYF45PSFG4SF5SGF/",
+      "https://docs.rs/aes-gcm/latest/src/aes_gcm/lib.rs.html#309",
+      "https://github.com/RustCrypto/AEADs/security/advisories/GHSA-423w-p2w9-r7vq",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ROBB6TBDAGEQ2WIINR34F3DPSN3FND6K/",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/RYQCICN6BVC6I75O3F6W4VK4J3MOYDJU/",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/U67ZSMNX5V3WTBYPUYF45PSFG4SF5SGF/"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2023-45812",
+    "title": "CVE-2023-45812 - The Apollo Router is a configurable, high-performance graph router written in Rust to run a federate...",
+    "description": "The Apollo Router is a configurable, high-performance graph router written in Rust to run a federated supergraph that uses Apollo Federation. Affected versions are subject to a Denial-of-Service (DoS) type vulnerability which causes the Router to panic and terminate when a multi-part response is sent. When users send queries to the router that uses the `@defer` or Subscriptions, the Router will panic. To be vulnerable, users of Router must have a coprocessor with `coprocessor.supergraph.response` configured in their `router.yaml` and also to support either `@defer` or Subscriptions. Apollo Router version 1.33.0 has a fix for this vulnerability which was introduced in PR #4014. Users are advised to upgrade. Users unable to upgrade should avoid using the coprocessor supergraph response or disable defer and subscriptions support and continue to use the coprocessor supergraph response.",
+    "severity": "HIGH",
+    "publish_date": "2023-10-18T22:15:09.403",
+    "references": [
+      "https://github.com/apollographql/router/pull/4014",
+      "https://github.com/apollographql/router/security/advisories/GHSA-r344-xw3p-2frj",
+      "https://github.com/apollographql/router/pull/4014",
+      "https://github.com/apollographql/router/security/advisories/GHSA-r344-xw3p-2frj"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2023-46135",
+    "title": "CVE-2023-46135 - rs-stellar-strkey is a Rust lib for encode/decode of Stellar Strkeys. A panic vulnerability occurs w...",
+    "description": "rs-stellar-strkey is a Rust lib for encode/decode of Stellar Strkeys. A panic vulnerability occurs when a specially crafted payload is used.`inner_payload_len` should not above 64. This vulnerability has been patched in version 0.0.8.",
+    "severity": "MEDIUM",
+    "publish_date": "2023-10-25T18:17:36.673",
+    "references": [
+      "https://github.com/stellar/rs-stellar-strkey/issues/58",
+      "https://github.com/stellar/rs-stellar-strkey/security/advisories/GHSA-5873-6fwq-463f",
+      "https://github.com/stellar/rs-stellar-strkey/issues/58",
+      "https://github.com/stellar/rs-stellar-strkey/security/advisories/GHSA-5873-6fwq-463f"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2023-48795",
+    "title": "CVE-2023-48795 - The SSH transport protocol with certain OpenSSH extensions, found in OpenSSH before 9.6 and other pr...",
+    "description": "The SSH transport protocol with certain OpenSSH extensions, found in OpenSSH before 9.6 and other products, allows remote attackers to bypass integrity checks such that some packets are omitted (from the extension negotiation message), and a client and server may consequently end up with a connection for which some security features have been downgraded or disabled, aka a Terrapin attack. This occurs because the SSH Binary Packet Protocol (BPP), implemented by these extensions, mishandles the handshake phase and mishandles use of sequence numbers. For example, there is an effective attack against SSH's use of ChaCha20-Poly1305 (and CBC with Encrypt-then-MAC). The bypass occurs in chacha20-poly1305@openssh.com and (if CBC is used) the -etm@openssh.com MAC algorithms. This also affects Maverick Synergy Java SSH API before 3.1.0-SNAPSHOT, Dropbear through 2022.83, Ssh before 5.1.1 in Erlang/OTP, PuTTY before 0.80, AsyncSSH before 2.14.2, golang.org/x/crypto before 0.17.0, libssh before 0.10.6, libssh2 through 1.11.0, Thorn Tech SFTP Gateway before 3.4.6, Tera Term before 5.1, Paramiko before 3.4.0, jsch before 0.2.15, SFTPGo before 2.5.6, Netgate pfSense Plus through 23.09.1, Netgate pfSense CE through 2.7.2, HPN-SSH through 18.2.0, ProFTPD before 1.3.8b (and before 1.3.9rc2), ORYX CycloneSSH before 2.3.4, NetSarang XShell 7 before Build 0144, CrushFTP before 10.6.0, ConnectBot SSH library before 2.2.22, Apache MINA sshd through 2.11.0, sshj through 0.37.0, TinySSH through 20230101, trilead-ssh2 6401, LANCOM LCOS and LANconfig, FileZilla before 3.66.4, Nova before 11.8, PKIX-SSH before 14.4, SecureCRT before 9.4.3, Transmit5 before 5.10.4, Win32-OpenSSH before 9.5.0.0p1-Beta, WinSCP before 6.2.2, Bitvise SSH Server before 9.32, Bitvise SSH Client before 9.33, KiTTY through 0.76.1.13, the net-ssh gem 7.2.0 for Ruby, the mscdex ssh2 module before 1.15.0 for Node.js, the thrussh library before 0.35.1 for Rust, and the Russh crate before 0.40.2 for Rust.",
+    "severity": "MEDIUM",
+    "publish_date": "2023-12-18T16:15:10.897",
+    "references": [
+      "http://packetstormsecurity.com/files/176280/Terrapin-SSH-Connection-Weakening.html",
+      "http://seclists.org/fulldisclosure/2024/Mar/21",
+      "http://www.openwall.com/lists/oss-security/2023/12/18/3",
+      "http://www.openwall.com/lists/oss-security/2023/12/19/5",
+      "http://www.openwall.com/lists/oss-security/2023/12/20/3",
+      "http://www.openwall.com/lists/oss-security/2024/03/06/3",
+      "http://www.openwall.com/lists/oss-security/2024/04/17/8",
+      "https://access.redhat.com/security/cve/cve-2023-48795",
+      "https://arstechnica.com/security/2023/12/hackers-can-break-ssh-channel-integrity-using-novel-data-corruption-attack/",
+      "https://bugs.gentoo.org/920280",
+      "https://bugzilla.redhat.com/show_bug.cgi?id=2254210",
+      "https://bugzilla.suse.com/show_bug.cgi?id=1217950",
+      "https://crates.io/crates/thrussh/versions",
+      "https://filezilla-project.org/versions.php",
+      "https://forum.netgate.com/topic/184941/terrapin-ssh-attack",
+      "https://git.libssh.org/projects/libssh.git/commit/?h=stable-0.10&id=10e09e273f69e149389b3e0e5d44b8c221c2e7f6",
+      "https://github.com/NixOS/nixpkgs/pull/275249",
+      "https://github.com/PowerShell/Win32-OpenSSH/issues/2189",
+      "https://github.com/PowerShell/Win32-OpenSSH/releases/tag/v9.5.0.0p1-Beta",
+      "https://github.com/TeraTermProject/teraterm/commit/7279fbd6ef4d0c8bdd6a90af4ada2899d786eec0",
+      "https://github.com/TeraTermProject/teraterm/releases/tag/v5.1",
+      "https://github.com/advisories/GHSA-45x7-px36-x8w8",
+      "https://github.com/apache/mina-sshd/issues/445",
+      "https://github.com/connectbot/sshlib/commit/5c8b534f6e97db7ac0e0e579331213aa25c173ab",
+      "https://github.com/connectbot/sshlib/compare/2.2.21...2.2.22",
+      "https://github.com/cyd01/KiTTY/issues/520",
+      "https://github.com/drakkan/sftpgo/releases/tag/v2.5.6",
+      "https://github.com/erlang/otp/blob/d1b43dc0f1361d2ad67601169e90a7fc50bb0369/lib/ssh/doc/src/notes.xml#L39-L42",
+      "https://github.com/erlang/otp/releases/tag/OTP-26.2.1",
+      "https://github.com/golang/crypto/commit/9d2ee975ef9fe627bf0a6f01c1f69e8ef1d4f05d",
+      "https://github.com/hierynomus/sshj/issues/916",
+      "https://github.com/janmojzis/tinyssh/issues/81",
+      "https://github.com/jtesta/ssh-audit/commit/8e972c5e94b460379fe0c7d20209c16df81538a5",
+      "https://github.com/libssh2/libssh2/pull/1291",
+      "https://github.com/mkj/dropbear/blob/17657c36cce6df7716d5ff151ec09a665382d5dd/CHANGES#L25",
+      "https://github.com/mscdex/ssh2/commit/97b223f8891b96d6fc054df5ab1d5a1a545da2a3",
+      "https://github.com/mwiede/jsch/compare/jsch-0.2.14...jsch-0.2.15",
+      "https://github.com/mwiede/jsch/issues/457",
+      "https://github.com/mwiede/jsch/pull/461",
+      "https://github.com/net-ssh/net-ssh/blob/2e65064a52d73396bfc3806c9196fc8108f33cd8/CHANGES.txt#L14-L16",
+      "https://github.com/openssh/openssh-portable/commits/master",
+      "https://github.com/paramiko/paramiko/issues/2337",
+      "https://github.com/proftpd/proftpd/blob/0a7ea9b0ba9fcdf368374a226370d08f10397d99/RELEASE_NOTES",
+      "https://github.com/proftpd/proftpd/blob/d21e7a2e47e9b38f709bec58e3fa711f759ad0e1/RELEASE_NOTES",
+      "https://github.com/proftpd/proftpd/blob/master/RELEASE_NOTES",
+      "https://github.com/proftpd/proftpd/issues/456",
+      "https://github.com/rapier1/hpn-ssh/releases",
+      "https://github.com/ronf/asyncssh/blob/develop/docs/changes.rst",
+      "https://github.com/ronf/asyncssh/tags",
+      "https://github.com/ssh-mitm/ssh-mitm/issues/165",
+      "https://github.com/warp-tech/russh/releases/tag/v0.40.2",
+      "https://gitlab.com/libssh/libssh-mirror/-/tags",
+      "https://groups.google.com/g/golang-announce/c/-n5WqVC18LQ",
+      "https://groups.google.com/g/golang-announce/c/qA3XtxvMUyg",
+      "https://help.panic.com/releasenotes/transmit5/",
+      "https://jadaptive.com/important-java-ssh-security-update-new-ssh-vulnerability-discovered-cve-2023-48795/",
+      "https://lists.debian.org/debian-lts-announce/2023/12/msg00017.html",
+      "https://lists.debian.org/debian-lts-announce/2024/01/msg00013.html",
+      "https://lists.debian.org/debian-lts-announce/2024/01/msg00014.html",
+      "https://lists.debian.org/debian-lts-announce/2024/04/msg00016.html",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/33XHJUB6ROFUOH2OQNENFROTVH6MHSHA/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/3CAYYW35MUTNO65RVAELICTNZZFMT2XS/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/3JIMLVBDWOP4FUPXPTB4PGHHIOMGFLQE/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/3YQLUQWLIHDB5QCXQEX7HXHAWMOKPP5O/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/6Y74KVCPEPT4MVU3LHDWCNNOXOE5ZLUR/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/APYIXIQOVDCRWLHTGB4VYMAUIAQLKYJ3/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/BL5KTLOSLH2KHRN4HCXJPK3JUVLDGEL6/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/C3AFMZ6MH2UHHOPIWT5YLSFV3D2VB3AC/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/CHHITS4PUOZAKFIUBQAQZC7JWXMOYE4B/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/F7EYCFQCTSGJXWO3ZZ44MGKFC5HA7G3Y/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/HYEDEXIKFKTUJIN43RG4B7T5ZS6MHUSP/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/I724O3LSRCPO4WNVIXTZCT4VVRMXMMSG/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/KEOTKBUPZXHE3F352JBYNTSNRXYLWD6P/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/KMZCVGUGJZZVDPCVDA7TEB22VUCNEXDD/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/L5Y6MNNVAPIJSXJERQ6PKZVCIUXSNJK7/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/LZQVUHWVWRH73YBXUQJOD6CKHDQBU3DM/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/MKQRBF3DWMWPH36LBCOBUTSIZRTPEZXB/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/QI3EHAHABFQK7OABNCSF5GMYP6TONTI7/",
+      "https://matt.ucc.asn.au/dropbear/CHANGES",
+      "https://nest.pijul.com/pijul/thrussh/changes/D6H7OWTTMHHX6BTB3B6MNBOBX2L66CBL4LGSEUSAI2MCRCJDQFRQC",
+      "https://news.ycombinator.com/item?id=38684904",
+      "https://news.ycombinator.com/item?id=38685286",
+      "https://news.ycombinator.com/item?id=38732005",
+      "https://nova.app/releases/#v11.8",
+      "https://oryx-embedded.com/download/#changelog",
+      "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2024-0002",
+      "https://roumenpetrov.info/secsh/#news20231220",
+      "https://security-tracker.debian.org/tracker/CVE-2023-48795",
+      "https://security-tracker.debian.org/tracker/source-package/libssh2",
+      "https://security-tracker.debian.org/tracker/source-package/proftpd-dfsg",
+      "https://security-tracker.debian.org/tracker/source-package/trilead-ssh2",
+      "https://security.gentoo.org/glsa/202312-16",
+      "https://security.gentoo.org/glsa/202312-17",
+      "https://security.netapp.com/advisory/ntap-20240105-0004/",
+      "https://support.apple.com/kb/HT214084",
+      "https://thorntech.com/cve-2023-48795-and-sftp-gateway/",
+      "https://twitter.com/TrueSkrillor/status/1736774389725565005",
+      "https://ubuntu.com/security/CVE-2023-48795",
+      "https://winscp.net/eng/docs/history#6.2.2",
+      "https://www.bitvise.com/ssh-client-version-history#933",
+      "https://www.bitvise.com/ssh-server-version-history",
+      "https://www.chiark.greenend.org.uk/~sgtatham/putty/changes.html",
+      "https://www.crushftp.com/crush10wiki/Wiki.jsp?page=Update",
+      "https://www.debian.org/security/2023/dsa-5586",
+      "https://www.debian.org/security/2023/dsa-5588",
+      "https://www.freebsd.org/security/advisories/FreeBSD-SA-23:19.openssh.asc",
+      "https://www.lancom-systems.de/service-support/allgemeine-sicherheitshinweise#c243508",
+      "https://www.netsarang.com/en/xshell-update-history/",
+      "https://www.openssh.com/openbsd.html",
+      "https://www.openssh.com/txt/release-9.6",
+      "https://www.openwall.com/lists/oss-security/2023/12/18/2",
+      "https://www.openwall.com/lists/oss-security/2023/12/20/3",
+      "https://www.paramiko.org/changelog.html",
+      "https://www.reddit.com/r/sysadmin/comments/18idv52/cve202348795_why_is_this_cve_still_undisclosed/",
+      "https://www.suse.com/c/suse-addresses-the-ssh-v2-protocol-terrapin-attack-aka-cve-2023-48795/",
+      "https://www.terrapin-attack.com",
+      "https://www.theregister.com/2023/12/20/terrapin_attack_ssh",
+      "https://www.vandyke.com/products/securecrt/history.txt",
+      "http://packetstormsecurity.com/files/176280/Terrapin-SSH-Connection-Weakening.html",
+      "http://seclists.org/fulldisclosure/2024/Mar/21",
+      "http://www.openwall.com/lists/oss-security/2023/12/18/3",
+      "http://www.openwall.com/lists/oss-security/2023/12/19/5",
+      "http://www.openwall.com/lists/oss-security/2023/12/20/3",
+      "http://www.openwall.com/lists/oss-security/2024/03/06/3",
+      "http://www.openwall.com/lists/oss-security/2024/04/17/8",
+      "https://access.redhat.com/security/cve/cve-2023-48795",
+      "https://arstechnica.com/security/2023/12/hackers-can-break-ssh-channel-integrity-using-novel-data-corruption-attack/",
+      "https://bugs.gentoo.org/920280",
+      "https://bugzilla.redhat.com/show_bug.cgi?id=2254210",
+      "https://bugzilla.suse.com/show_bug.cgi?id=1217950",
+      "https://crates.io/crates/thrussh/versions",
+      "https://filezilla-project.org/versions.php",
+      "https://forum.netgate.com/topic/184941/terrapin-ssh-attack",
+      "https://git.libssh.org/projects/libssh.git/commit/?h=stable-0.10&id=10e09e273f69e149389b3e0e5d44b8c221c2e7f6",
+      "https://github.com/NixOS/nixpkgs/pull/275249",
+      "https://github.com/PowerShell/Win32-OpenSSH/issues/2189",
+      "https://github.com/PowerShell/Win32-OpenSSH/releases/tag/v9.5.0.0p1-Beta",
+      "https://github.com/TeraTermProject/teraterm/commit/7279fbd6ef4d0c8bdd6a90af4ada2899d786eec0",
+      "https://github.com/TeraTermProject/teraterm/releases/tag/v5.1",
+      "https://github.com/advisories/GHSA-45x7-px36-x8w8",
+      "https://github.com/apache/mina-sshd/issues/445",
+      "https://github.com/connectbot/sshlib/commit/5c8b534f6e97db7ac0e0e579331213aa25c173ab",
+      "https://github.com/connectbot/sshlib/compare/2.2.21...2.2.22",
+      "https://github.com/cyd01/KiTTY/issues/520",
+      "https://github.com/drakkan/sftpgo/releases/tag/v2.5.6",
+      "https://github.com/erlang/otp/blob/d1b43dc0f1361d2ad67601169e90a7fc50bb0369/lib/ssh/doc/src/notes.xml#L39-L42",
+      "https://github.com/erlang/otp/releases/tag/OTP-26.2.1",
+      "https://github.com/golang/crypto/commit/9d2ee975ef9fe627bf0a6f01c1f69e8ef1d4f05d",
+      "https://github.com/hierynomus/sshj/issues/916",
+      "https://github.com/janmojzis/tinyssh/issues/81",
+      "https://github.com/jtesta/ssh-audit/commit/8e972c5e94b460379fe0c7d20209c16df81538a5",
+      "https://github.com/libssh2/libssh2/pull/1291",
+      "https://github.com/mkj/dropbear/blob/17657c36cce6df7716d5ff151ec09a665382d5dd/CHANGES#L25",
+      "https://github.com/mscdex/ssh2/commit/97b223f8891b96d6fc054df5ab1d5a1a545da2a3",
+      "https://github.com/mwiede/jsch/compare/jsch-0.2.14...jsch-0.2.15",
+      "https://github.com/mwiede/jsch/issues/457",
+      "https://github.com/mwiede/jsch/pull/461",
+      "https://github.com/net-ssh/net-ssh/blob/2e65064a52d73396bfc3806c9196fc8108f33cd8/CHANGES.txt#L14-L16",
+      "https://github.com/openssh/openssh-portable/commits/master",
+      "https://github.com/paramiko/paramiko/issues/2337",
+      "https://github.com/proftpd/proftpd/blob/0a7ea9b0ba9fcdf368374a226370d08f10397d99/RELEASE_NOTES",
+      "https://github.com/proftpd/proftpd/blob/d21e7a2e47e9b38f709bec58e3fa711f759ad0e1/RELEASE_NOTES",
+      "https://github.com/proftpd/proftpd/blob/master/RELEASE_NOTES",
+      "https://github.com/proftpd/proftpd/issues/456",
+      "https://github.com/rapier1/hpn-ssh/releases",
+      "https://github.com/ronf/asyncssh/blob/develop/docs/changes.rst",
+      "https://github.com/ronf/asyncssh/tags",
+      "https://github.com/ssh-mitm/ssh-mitm/issues/165",
+      "https://github.com/warp-tech/russh/releases/tag/v0.40.2",
+      "https://gitlab.com/libssh/libssh-mirror/-/tags",
+      "https://groups.google.com/g/golang-announce/c/-n5WqVC18LQ",
+      "https://groups.google.com/g/golang-announce/c/qA3XtxvMUyg",
+      "https://help.panic.com/releasenotes/transmit5/",
+      "https://jadaptive.com/important-java-ssh-security-update-new-ssh-vulnerability-discovered-cve-2023-48795/",
+      "https://lists.debian.org/debian-lts-announce/2023/12/msg00017.html",
+      "https://lists.debian.org/debian-lts-announce/2024/01/msg00013.html",
+      "https://lists.debian.org/debian-lts-announce/2024/01/msg00014.html",
+      "https://lists.debian.org/debian-lts-announce/2024/04/msg00016.html",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/33XHJUB6ROFUOH2OQNENFROTVH6MHSHA/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/3CAYYW35MUTNO65RVAELICTNZZFMT2XS/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/3JIMLVBDWOP4FUPXPTB4PGHHIOMGFLQE/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/3YQLUQWLIHDB5QCXQEX7HXHAWMOKPP5O/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/6Y74KVCPEPT4MVU3LHDWCNNOXOE5ZLUR/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/APYIXIQOVDCRWLHTGB4VYMAUIAQLKYJ3/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/BL5KTLOSLH2KHRN4HCXJPK3JUVLDGEL6/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/C3AFMZ6MH2UHHOPIWT5YLSFV3D2VB3AC/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/CHHITS4PUOZAKFIUBQAQZC7JWXMOYE4B/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/F7EYCFQCTSGJXWO3ZZ44MGKFC5HA7G3Y/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/HYEDEXIKFKTUJIN43RG4B7T5ZS6MHUSP/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/I724O3LSRCPO4WNVIXTZCT4VVRMXMMSG/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/KEOTKBUPZXHE3F352JBYNTSNRXYLWD6P/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/KMZCVGUGJZZVDPCVDA7TEB22VUCNEXDD/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/L5Y6MNNVAPIJSXJERQ6PKZVCIUXSNJK7/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/LZQVUHWVWRH73YBXUQJOD6CKHDQBU3DM/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/MKQRBF3DWMWPH36LBCOBUTSIZRTPEZXB/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/QI3EHAHABFQK7OABNCSF5GMYP6TONTI7/",
+      "https://matt.ucc.asn.au/dropbear/CHANGES",
+      "https://nest.pijul.com/pijul/thrussh/changes/D6H7OWTTMHHX6BTB3B6MNBOBX2L66CBL4LGSEUSAI2MCRCJDQFRQC",
+      "https://news.ycombinator.com/item?id=38684904",
+      "https://news.ycombinator.com/item?id=38685286",
+      "https://news.ycombinator.com/item?id=38732005",
+      "https://nova.app/releases/#v11.8",
+      "https://oryx-embedded.com/download/#changelog",
+      "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2024-0002",
+      "https://roumenpetrov.info/secsh/#news20231220",
+      "https://security-tracker.debian.org/tracker/CVE-2023-48795",
+      "https://security-tracker.debian.org/tracker/source-package/libssh2",
+      "https://security-tracker.debian.org/tracker/source-package/proftpd-dfsg",
+      "https://security-tracker.debian.org/tracker/source-package/trilead-ssh2",
+      "https://security.gentoo.org/glsa/202312-16",
+      "https://security.gentoo.org/glsa/202312-17",
+      "https://security.netapp.com/advisory/ntap-20240105-0004/",
+      "https://support.apple.com/kb/HT214084",
+      "https://thorntech.com/cve-2023-48795-and-sftp-gateway/",
+      "https://twitter.com/TrueSkrillor/status/1736774389725565005",
+      "https://ubuntu.com/security/CVE-2023-48795",
+      "https://winscp.net/eng/docs/history#6.2.2",
+      "https://www.bitvise.com/ssh-client-version-history#933",
+      "https://www.bitvise.com/ssh-server-version-history",
+      "https://www.chiark.greenend.org.uk/~sgtatham/putty/changes.html",
+      "https://www.crushftp.com/crush10wiki/Wiki.jsp?page=Update",
+      "https://www.debian.org/security/2023/dsa-5586",
+      "https://www.debian.org/security/2023/dsa-5588",
+      "https://www.freebsd.org/security/advisories/FreeBSD-SA-23:19.openssh.asc",
+      "https://www.lancom-systems.de/service-support/allgemeine-sicherheitshinweise#c243508",
+      "https://www.netsarang.com/en/xshell-update-history/",
+      "https://www.openssh.com/openbsd.html",
+      "https://www.openssh.com/txt/release-9.6",
+      "https://www.openwall.com/lists/oss-security/2023/12/18/2",
+      "https://www.openwall.com/lists/oss-security/2023/12/20/3",
+      "https://www.paramiko.org/changelog.html",
+      "https://www.reddit.com/r/sysadmin/comments/18idv52/cve202348795_why_is_this_cve_still_undisclosed/",
+      "https://www.suse.com/c/suse-addresses-the-ssh-v2-protocol-terrapin-attack-aka-cve-2023-48795/",
+      "https://www.terrapin-attack.com",
+      "https://www.theregister.com/2023/12/20/terrapin_attack_ssh",
+      "https://www.vandyke.com/products/securecrt/history.txt",
+      "https://www.vicarius.io/vsociety/posts/cve-2023-48795-detect-openssh-vulnerabilit",
+      "https://www.vicarius.io/vsociety/posts/cve-2023-48795-mitigate-openssh-vulnerability"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2023-50711",
+    "title": "CVE-2023-50711 - vmm-sys-util is a collection of modules that provides helpers and utilities used by multiple rust-vm...",
+    "description": "vmm-sys-util is a collection of modules that provides helpers and utilities used by multiple rust-vmm components. Starting in version 0.5.0 and prior to version 0.12.0, an issue in the `FamStructWrapper::deserialize` implementation provided by the crate for `vmm_sys_util::fam::FamStructWrapper` can lead to out of bounds memory accesses. The deserialization does not check that the length stored in the header matches the flexible array length. Mismatch in the lengths might allow out of bounds memory access through Rust-safe methods. The issue was corrected in version 0.12.0 by inserting a check that verifies the lengths of compared flexible arrays are equal for any deserialized header and aborting deserialization otherwise. Moreover, the API was changed so that header length can only be modified through Rust-unsafe code. This ensures that users cannot trigger out-of-bounds memory access from Rust-safe code.",
+    "severity": "MEDIUM",
+    "publish_date": "2024-01-02T20:15:10.250",
+    "references": [
+      "https://github.com/rust-vmm/vmm-sys-util/commit/30172fca2a8e0a38667d934ee56682247e13f167",
+      "https://github.com/rust-vmm/vmm-sys-util/security/advisories/GHSA-875g-mfp6-g7f9",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/W5XMCLV2P3ANS3XN4NXZTV4PUNTLWUNJ/",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/YJI7D273R6G5RUC246KTI2YY3AXZKZMD/",
+      "https://github.com/rust-vmm/vmm-sys-util/commit/30172fca2a8e0a38667d934ee56682247e13f167",
+      "https://github.com/rust-vmm/vmm-sys-util/security/advisories/GHSA-875g-mfp6-g7f9",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/W5XMCLV2P3ANS3XN4NXZTV4PUNTLWUNJ/",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/YJI7D273R6G5RUC246KTI2YY3AXZKZMD/"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2024-21629",
+    "title": "CVE-2024-21629 - Rust EVM is an Ethereum Virtual Machine interpreter. In `rust-evm`, a feature called `record_externa...",
+    "description": "Rust EVM is an Ethereum Virtual Machine interpreter. In `rust-evm`, a feature called `record_external_operation` was introduced, allowing library users to record custom gas changes. This feature can have some bogus interactions with the call stack. In particular, during finalization of a `CREATE` or `CREATE2`, in the case that the substack execution happens successfully, `rust-evm` will first commit the substate, and then call `record_external_operation(Write(out_code.len()))`. If `record_external_operation` later fails, this error is returned to the parent call stack, instead of `Succeeded`. Yet, the substate commitment already happened. This causes smart contracts able to commit state changes, when the parent caller contract receives zero address (which usually indicates that the execution has failed). This issue only impacts library users with custom `record_external_operation` that returns errors. The issue is patched in release 0.41.1. No known workarounds are available.",
+    "severity": "MEDIUM",
+    "publish_date": "2024-01-02T22:15:09.897",
+    "references": [
+      "https://github.com/rust-ethereum/evm/blob/release-v041/src/executor/stack/executor.rs#L1012C25-L1012C69",
+      "https://github.com/rust-ethereum/evm/commit/d8991ec727ad0fb64fe9957a3cd307387a6701e4",
+      "https://github.com/rust-ethereum/evm/pull/264",
+      "https://github.com/rust-ethereum/evm/security/advisories/GHSA-27wg-99g8-2v4v",
+      "https://github.com/rust-ethereum/evm/blob/release-v041/src/executor/stack/executor.rs#L1012C25-L1012C69",
+      "https://github.com/rust-ethereum/evm/commit/d8991ec727ad0fb64fe9957a3cd307387a6701e4",
+      "https://github.com/rust-ethereum/evm/pull/264",
+      "https://github.com/rust-ethereum/evm/security/advisories/GHSA-27wg-99g8-2v4v"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2024-3296",
+    "title": "CVE-2024-3296 - A timing-based side-channel flaw exists in the rust-openssl package, which could be sufficient to re...",
+    "description": "A timing-based side-channel flaw exists in the rust-openssl package, which could be sufficient to recover a plaintext across a network in a Bleichenbacher-style attack. To achieve successful decryption, an attacker would have to be able to send a large number of trial messages for decryption. The vulnerability affects the legacy PKCS#1v1.5 RSA encryption padding mode.",
+    "severity": "MEDIUM",
+    "publish_date": "2024-04-04T14:15:11.080",
+    "references": [
+      "https://access.redhat.com/security/cve/CVE-2024-3296",
+      "https://bugzilla.redhat.com/show_bug.cgi?id=2269723",
+      "https://access.redhat.com/security/cve/CVE-2024-3296",
+      "https://bugzilla.redhat.com/show_bug.cgi?id=2269723"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2024-32984",
+    "title": "CVE-2024-32984 - Yamux is a stream multiplexer over reliable, ordered connections such as TCP/IP. The Rust implementa...",
+    "description": "Yamux is a stream multiplexer over reliable, ordered connections such as TCP/IP. The Rust implementation of the Yamux stream multiplexer uses a vector for pending frames. This vector is not bounded in length. Every time the Yamux protocol requires sending of a new frame, this frame gets appended to this vector. This can be remotely triggered in a number of ways, for example by: 1. Opening a new libp2p Identify stream. This causes the node to send its Identify message. Of course, every other protocol that causes the sending of data also works. The larger the response, the more data is enqueued. 2. Sending a Yamux Ping frame. This causes a Pong frame to be enqueued. Under normal circumstances, this queue of pending frames would be drained once they’re sent out over the network. However, the attacker can use TCP’s receive window mechanism to prevent the victim from sending out any data: By not reading from the TCP connection, the receive window will never be increased, and the victim won’t be able to send out any new data (this is how TCP implements backpressure). Once this happens, Yamux’s queue of pending frames will start growing indefinitely. The queue will only be drained once the underlying TCP connection is closed. An attacker can cause a remote node to run out of memory, which will result in the corresponding process getting terminated by the operating system.\n",
+    "severity": "HIGH",
+    "publish_date": "2024-05-01T11:15:47.633",
+    "references": [
+      "https://github.com/libp2p/rust-yamux/blob/yamux-v0.13.1/yamux/src/connection.rs#L289",
+      "https://github.com/libp2p/rust-yamux/security/advisories/GHSA-3999-5ffv-wp2r",
+      "https://github.com/sigp/rust-yamux/commit/6689e227a48258a52347cd1d984adfc94afc6f7a",
+      "https://github.com/libp2p/rust-yamux/blob/yamux-v0.13.1/yamux/src/connection.rs#L289",
+      "https://github.com/libp2p/rust-yamux/security/advisories/GHSA-3999-5ffv-wp2r",
+      "https://github.com/sigp/rust-yamux/commit/6689e227a48258a52347cd1d984adfc94afc6f7a"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2024-34353",
+    "title": "CVE-2024-34353 - The matrix-sdk-crypto crate, part of the Matrix Rust SDK project, is an implementation of a Matrix e...",
+    "description": "The matrix-sdk-crypto crate, part of the Matrix Rust SDK project, is an implementation of a Matrix end-to-end encryption state machine in Rust. In Matrix, the server-side `key backup` stores encrypted copies of Matrix message keys. This facilitates key sharing between a user's devices and provides a redundant copy in case all devices are lost. The key backup uses asymmetric\ncryptography, with each server-side key backup assigned a unique public-private key pair. Due to a logic bug introduced in commit 71136e44c03c79f80d6d1a2446673bc4d53a2067, matrix-sdk-crypto version 0.7.0 will sometimes log the private part of the backup key pair to Rust debug logs (using the `tracing` crate). This issue has been resolved in matrix-sdk-crypto version 0.7.1. No known workarounds are available.",
+    "severity": "MEDIUM",
+    "publish_date": "2024-05-14T15:38:43.910",
+    "references": [
+      "https://crates.io/crates/matrix-sdk-crypto/0.7.1",
+      "https://github.com/matrix-org/matrix-rust-sdk/commit/71136e44c03c79f80d6d1a2446673bc4d53a2067",
+      "https://github.com/matrix-org/matrix-rust-sdk/commit/fa10bbb5dd0f9120a51aa1854cec752e25790bb0",
+      "https://github.com/matrix-org/matrix-rust-sdk/releases/tag/matrix-sdk-crypto-0.7.1",
+      "https://github.com/matrix-org/matrix-rust-sdk/security/advisories/GHSA-9ggc-845v-gcgv",
+      "https://crates.io/crates/matrix-sdk-crypto/0.7.1",
+      "https://github.com/matrix-org/matrix-rust-sdk/commit/71136e44c03c79f80d6d1a2446673bc4d53a2067",
+      "https://github.com/matrix-org/matrix-rust-sdk/commit/fa10bbb5dd0f9120a51aa1854cec752e25790bb0",
+      "https://github.com/matrix-org/matrix-rust-sdk/releases/tag/matrix-sdk-crypto-0.7.1",
+      "https://github.com/matrix-org/matrix-rust-sdk/security/advisories/GHSA-9ggc-845v-gcgv"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2024-35197",
+    "title": "CVE-2024-35197 - gitoxide is a pure Rust implementation of Git. On Windows, fetching refs that clash with legacy devi...",
+    "description": "gitoxide is a pure Rust implementation of Git. On Windows, fetching refs that clash with legacy device names reads from the devices, and checking out paths that clash with such names writes arbitrary data to the devices. This allows a repository, when cloned, to cause indefinite blocking or the production of arbitrary message that appear to have come from the application, and potentially other harmful effects under limited circumstances. If Windows is not used, or untrusted repositories are not cloned or otherwise used, then there is no impact. A minor degradation in availability may also be possible, such as with a very large file named `CON`, though the user could interrupt the application.",
+    "severity": "MEDIUM",
+    "publish_date": "2024-05-23T13:15:09.153",
+    "references": [
+      "https://github.com/Byron/gitoxide/security/advisories/GHSA-49jc-r788-3fc9",
+      "https://github.com/Byron/gitoxide/security/advisories/GHSA-49jc-r788-3fc9"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2024-41949",
+    "title": "CVE-2024-41949 - biscuit-rust is the Rust implementation of Biscuit, an authentication and authorization token for mi...",
+    "description": "biscuit-rust is the Rust implementation of Biscuit, an authentication and authorization token for microservices architectures. Third-party blocks can be generated without transferring the whole token to the third-party authority. Instead, a ThirdPartyBlock request can be sent, providing only the necessary info to generate a third-party block and to sign it, which includes the public key of the previous block (used in the signature) and the public keys part of the token symbol table (for public key interning in datalog expressions). A third-part block request forged by a malicious user can trick the third-party authority into generating datalog trusting the wrong keypair.",
+    "severity": "LOW",
+    "publish_date": "2024-08-01T22:15:28.950",
+    "references": [
+      "https://github.com/biscuit-auth/biscuit-rust/security/advisories/GHSA-p9w4-585h-g3c7"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2024-43367",
+    "title": "CVE-2024-43367 - Boa is an embeddable and experimental Javascript engine written in Rust. Starting in version 0.16 an...",
+    "description": "Boa is an embeddable and experimental Javascript engine written in Rust. Starting in version 0.16 and prior to version 0.19.0, a wrong assumption made when handling ECMAScript's `AsyncGenerator` operations can cause an uncaught exception on certain scripts. Boa's implementation of `AsyncGenerator` makes the assumption that the state of an `AsyncGenerator` object cannot change while resolving a promise created by methods of `AsyncGenerator` such as `%AsyncGeneratorPrototype%.next`, `%AsyncGeneratorPrototype%.return`, or `%AsyncGeneratorPrototype%.throw`. However, a carefully constructed code could trigger a state transition from a getter method for the promise's `then` property, which causes the engine to fail an assertion of this assumption, causing an uncaught exception. This could be used to create a Denial Of Service attack in applications that run arbitrary ECMAScript code provided by an external user. Version 0.19.0 is patched to correctly handle this case. Users unable to upgrade to the patched version would want to use `std::panic::catch_unwind` to ensure any exceptions caused by the engine don't impact the availability of the main application.",
+    "severity": "HIGH",
+    "publish_date": "2024-08-15T21:15:17.777",
+    "references": [
+      "https://github.com/boa-dev/boa/commit/69ea2f52ed976934bff588d6b566bae01be313f7",
+      "https://github.com/boa-dev/boa/security/advisories/GHSA-f67q-wr6w-23jq",
+      "https://github.com/tc39/ecma262/security/advisories/GHSA-g38c-wh3c-5h9r"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2024-44073",
+    "title": "CVE-2024-44073 - The Miniscript (aka rust-miniscript) library before 12.2.0 for Rust allows stack consumption because...",
+    "description": "The Miniscript (aka rust-miniscript) library before 12.2.0 for Rust allows stack consumption because it does not properly track tree depth.",
+    "severity": "HIGH",
+    "publish_date": "2024-08-19T03:15:03.790",
+    "references": [
+      "https://github.com/rust-bitcoin/rust-miniscript/compare/11.2.0...12.2.0",
+      "https://github.com/rust-bitcoin/rust-miniscript/pull/704",
+      "https://github.com/rust-bitcoin/rust-miniscript/pull/712"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2024-47614",
+    "title": "CVE-2024-47614 - async-graphql is a GraphQL server library implemented in Rust. async-graphql before 7.0.10 does not ...",
+    "description": "async-graphql is a GraphQL server library implemented in Rust. async-graphql before 7.0.10 does not limit the number of directives for a field. This can lead to Service Disruption, Resource Exhaustion, and User Experience Degradation. This vulnerability is fixed in 7.0.10.",
+    "severity": "HIGH",
+    "publish_date": "2024-10-03T15:15:14.720",
+    "references": [
+      "https://github.com/async-graphql/async-graphql/commit/7f1791488463d4e9c5adcd543962173e2f6cbd34",
+      "https://github.com/async-graphql/async-graphql/security/advisories/GHSA-5gc2-7c65-8fq8"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2024-51502",
+    "title": "CVE-2024-51502 - loona is an experimental, HTTP/1.1 and HTTP/2 implementation in Rust on top of io-uring. `loona-hpac...",
+    "description": "loona is an experimental, HTTP/1.1 and HTTP/2 implementation in Rust on top of io-uring. `loona-hpack` suffers from the same vulnerability as the original `hpack` as documented in issue #11. All users who try to decode untrusted input using the Decoder are vulnerable to this exploit. This issue has been addressed in release version 0.4.3. All users are advised to upgrade. There are no known workarounds for this vulnerability.",
+    "severity": "未知",
+    "publish_date": "2024-11-04T23:15:05.070",
+    "references": [
+      "https://github.com/bearcove/loona/commit/9a4028ec6484f50a320281271a41a5040ddb1ba8",
+      "https://github.com/bearcove/loona/security/advisories/GHSA-7vm6-qwh5-9x44",
+      "https://github.com/mlalic/hpack-rs/issues/11"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2024-32468",
+    "title": "CVE-2024-32468 - Deno is a runtime for JavaScript and TypeScript written in rust. Several cross-site scripting vulner...",
+    "description": "Deno is a runtime for JavaScript and TypeScript written in rust. Several cross-site scripting vulnerabilities existed in the `deno_doc` crate which lead to Self-XSS with deno doc --html. 1.) XSS in generated `search_index.js`, `deno_doc` outputs a JavaScript file for searching. However, the generated file used `innerHTML` on unsanitzed HTML input. 2.) XSS via property, method and enum names, `deno_doc` did not sanitize property names, method names and enum names. The first XSS most likely didn't have an impact since `deno doc --html` is expected to be used locally with own packages.",
+    "severity": "MEDIUM",
+    "publish_date": "2024-11-25T19:15:09.510",
+    "references": [
+      "https://github.com/denoland/deno/security/advisories/GHSA-qqwr-j9mm-fhw6",
+      "https://github.com/denoland/deno_doc/blob/dc556c848831d7ae48f3eff2ababc6e75eb6b73e/src/html/templates/pages/search.js#L120-L144"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2024-53856",
+    "title": "CVE-2024-53856 - rPGP is a pure Rust implementation of OpenPGP. Prior to 0.14.1, rPGP allows an attacker to trigger r...",
+    "description": "rPGP is a pure Rust implementation of OpenPGP. Prior to 0.14.1, rPGP allows an attacker to trigger rpgp crashes by providing crafted data. This vulnerability is fixed in 0.14.1.",
+    "severity": "HIGH",
+    "publish_date": "2024-12-05T16:15:26.237",
+    "references": [
+      "https://github.com/rpgp/rpgp/security/advisories/GHSA-9rmp-2568-59rv"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2024-53857",
+    "title": "CVE-2024-53857 - rPGP is a pure Rust implementation of OpenPGP. Prior to 0.14.1, rPGP allows attackers to trigger res...",
+    "description": "rPGP is a pure Rust implementation of OpenPGP. Prior to 0.14.1, rPGP allows attackers to trigger resource exhaustion vulnerabilities in rpgp by providing crafted messages. This affects general message parsing and decryption with symmetric keys.",
+    "severity": "HIGH",
+    "publish_date": "2024-12-05T16:15:26.393",
+    "references": [
+      "https://github.com/rpgp/rpgp/security/advisories/GHSA-4grw-m28r-q285"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2024-56327",
+    "title": "CVE-2024-56327 - pyrage is a set of Python bindings for the rage file encryption library (age in Rust). `pyrage` uses...",
+    "description": "pyrage is a set of Python bindings for the rage file encryption library (age in Rust). `pyrage` uses the Rust `age` crate for its underlying operations, and `age` is vulnerable to GHSA-4fg7-vxc8-qx5w. All details of GHSA-4fg7-vxc8-qx5w are relevant to `pyrage` for the versions specified in this advisory. See GHSA-4fg7-vxc8-qx5w for full details. Versions of `pyrage` before 1.2.0 lack plugin support and are therefore **not affected**. An equivalent issue was fixed in [the reference Go implementation of age](https://github.com/FiloSottile/age), see advisory GHSA-32gq-x56h-299c. This issue has been addressed in version 1.2.3 and all users are advised to update. There are no known workarounds for this vulnerability.",
+    "severity": "CRITICAL",
+    "publish_date": "2024-12-19T23:15:07.147",
+    "references": [
+      "https://github.com/FiloSottile/age/security/advisories/GHSA-32gq-x56h-299c",
+      "https://github.com/advisories/GHSA-4fg7-vxc8-qx5w",
+      "https://github.com/woodruffw/pyrage/security/advisories/GHSA-47h8-jmp3-9f28"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2025-24898",
+    "title": "CVE-2025-24898 - rust-openssl is a set of OpenSSL bindings for the Rust programming language. In affected versions `s...",
+    "description": "rust-openssl is a set of OpenSSL bindings for the Rust programming language. In affected versions `ssl::select_next_proto` can return a slice pointing into the `server` argument's buffer but with a lifetime bound to the `client` argument. In situations where the `sever` buffer's lifetime is shorter than the `client` buffer's, this can cause a use after free. This could cause the server to crash or to return arbitrary memory contents to the client. The crate`openssl` version 0.10.70 fixes the signature of `ssl::select_next_proto` to properly constrain the output buffer's lifetime to that of both input buffers. Users are advised to upgrade. In standard usage of `ssl::select_next_proto` in the callback passed to `SslContextBuilder::set_alpn_select_callback`, code is only affected if the `server` buffer is constructed *within* the callback.",
+    "severity": "未知",
+    "publish_date": "2025-02-03T18:15:43.077",
+    "references": [
+      "https://crates.io/crates/openssl",
+      "https://github.com/sfackler/rust-openssl/pull/2360",
+      "https://github.com/sfackler/rust-openssl/security/advisories/GHSA-rpmj-rpgj-qmpm",
+      "https://lists.debian.org/debian-lts-announce/2025/02/msg00009.html"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2025-25188",
+    "title": "CVE-2025-25188 - Hickory DNS is a Rust based DNS client, server, and resolver. A vulnerability present starting in ve...",
+    "description": "Hickory DNS is a Rust based DNS client, server, and resolver. A vulnerability present starting in version 0.8.0 and prior to versions 0.24.3 and 0.25.0-alpha.5 impacts Hickory DNS users relying on DNSSEC verification in the client library, stub resolver, or recursive resolver. The DNSSEC validation routines treat entire RRsets of DNSKEY records as trusted once they have established trust in only one of the DNSKEYs. As a result, if a zone includes a DNSKEY with a public key that matches a configured trust anchor, all keys in that zone will be trusted to authenticate other records in the zone. There is a second variant of this vulnerability involving DS records, where an authenticated DS record covering one DNSKEY leads to trust in signatures made by an unrelated DNSKEY in the same zone. Versions 0.24.3 and 0.25.0-alpha.5 fix the issue.",
+    "severity": "未知",
+    "publish_date": "2025-02-10T18:15:35.827",
+    "references": [
+      "https://github.com/hickory-dns/hickory-dns/commit/e118c6eec569f4340421f86ee0686714010c63e9",
+      "https://github.com/hickory-dns/hickory-dns/security/advisories/GHSA-37wc-h8xc-5hc4"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2025-25194",
+    "title": "CVE-2025-25194 - Lemmy, a link aggregator and forum for the fediverse, is vulnerable to server-side request forgery v...",
+    "description": "Lemmy, a link aggregator and forum for the fediverse, is vulnerable to server-side request forgery via a dependency on activitypub_federation, a framework for ActivityPub federation in Rust. This vulnerability, which is present in versions 0.6.2 and prior of activitypub_federation and versions 0.19.8 and prior of Lemmy, allows a user to bypass any predefined hardcoded URL path or security anti-Localhost mechanism and perform an arbitrary GET request to any Host, Port and URL using a Webfinger Request. As of time of publication, a fix has not been made available.",
+    "severity": "MEDIUM",
+    "publish_date": "2025-02-10T23:15:16.067",
+    "references": [
+      "https://github.com/LemmyNet/lemmy/security/advisories/GHSA-7723-35v7-qcxw"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2025-24903",
+    "title": "CVE-2025-24903 - libsignal-service-rs is a Rust version of the libsignal-service-java library which implements the co...",
+    "description": "libsignal-service-rs is a Rust version of the libsignal-service-java library which implements the core functionality to communicate with Signal servers. Prior to commit 82d70f6720e762898f34ae76b0894b0297d9b2f8, any contact may forge a sync message, impersonating another device of the local user. The origin of sync messages is not checked. Patched libsignal-service can be found after commit 82d70f6720e762898f34ae76b0894b0297d9b2f8. The `Metadata` struct contains an additional `was_encrypted` field, which breaks the API, but should be easily resolvable. No known workarounds are available.",
+    "severity": "HIGH",
+    "publish_date": "2025-02-13T16:16:48.913",
+    "references": [
+      "https://github.com/whisperfish/libsignal-service-rs/commit/82d70f6720e762898f34ae76b0894b0297d9b2f8",
+      "https://github.com/whisperfish/libsignal-service-rs/security/advisories/GHSA-r58q-66g9-h6g8"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2025-24904",
+    "title": "CVE-2025-24904 - libsignal-service-rs is a Rust version of the libsignal-service-java library which implements the co...",
+    "description": "libsignal-service-rs is a Rust version of the libsignal-service-java library which implements the core functionality to communicate with Signal servers. Prior to commit 82d70f6720e762898f34ae76b0894b0297d9b2f8, plaintext content envelopes could be injected by a server or a malicious client, and may have been able to bypass the end-to-end encryption and authentication. The vulnerability is fixed per 82d70f6720e762898f34ae76b0894b0297d9b2f8. The `Metadata` struct contains an additional `was_encrypted` field, which breaks the API, but should be easily resolvable. No known workarounds are available.",
+    "severity": "HIGH",
+    "publish_date": "2025-02-13T16:16:49.053",
+    "references": [
+      "https://github.com/whisperfish/libsignal-service-rs/commit/82d70f6720e762898f34ae76b0894b0297d9b2f8",
+      "https://github.com/whisperfish/libsignal-service-rs/security/advisories/GHSA-hrrc-wpfw-5hj2"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2025-26877",
+    "title": "CVE-2025-26877 - Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability i...",
+    "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Rustaurius Front End Users allows Stored XSS. This issue affects Front End Users: from n/a through 3.2.30.",
+    "severity": "MEDIUM",
+    "publish_date": "2025-02-25T15:15:24.380",
+    "references": [
+      "https://patchstack.com/database/wordpress/plugin/front-end-only-users/vulnerability/wordpress-front-end-users-plugin-3-2-30-cross-site-scripting-xss-vulnerability?_s_id=cve"
+    ],
+    "source": "NVD"
+  },
+  {
+    "cve_id": "CVE-2025-27498",
+    "title": "CVE-2025-27498 - aes-gcm is a pure Rust implementation of the AES-GCM. In decrypt_in_place_detached, the decrypted ci...",
+    "description": "aes-gcm is a pure Rust implementation of the AES-GCM. In decrypt_in_place_detached, the decrypted ciphertext (which is the correct ciphertext) is exposed even if the tag is incorrect. This is because in decrypt_inplace in asconcore.rs, tag verification causes an error to be returned with the plaintext contents still in buffer. The vulnerability is fixed in 0.4.3.",
+    "severity": "未知",
+    "publish_date": "2025-03-03T17:15:16.443",
+    "references": [
+      "https://github.com/RustCrypto/AEADs/commit/d1d749ba57e38e65b0e037cd744d0b17f7254037",
+      "https://github.com/RustCrypto/AEADs/security/advisories/GHSA-r38m-44fw-h886"
+    ],
+    "source": "NVD"
+  }
+]
